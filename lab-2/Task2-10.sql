@@ -1,2 +1,3 @@
+/*делаем выборку по 10 фамилиям по алфавиту(ORDER BY) без повторов(DISTINCT)*/
 USE cd;
-select distinct surname from members order by surname limit 10;
+SELECT DISTINCT surname FROM members ORDER BY surname LIMIT 10;

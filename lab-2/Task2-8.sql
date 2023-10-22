@@ -1,4 +1,7 @@
+/*делаем выборку по качетсвенной стоимости*/
 USE cd;
-Select * from facilities where monthlymaintenance<100;
-Use cd;
-Select * from facilities where monthlymaintenance>=100;
+/*качетсвенная стоимость==дешевый*/
+SELECT facility, "дешевый" AS "качественная стоимость" FROM facilities WHERE monthlymaintenance<100
+UNION
+/*качественная стоимость==дорогой*/
+SELECT facility, "дорогой" AS "качественная стоимость" FROM facilities WHERE monthlymaintenance>=100;

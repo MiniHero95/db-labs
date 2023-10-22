@@ -1,2 +1,3 @@
+/*делаем выборку,чтобы объекты включали в себя слово "Tennis"("%Tennis%")*/
 USE cd;
-SELECT facid,facility from facilities where facility like "%Tennis%"
+SELECT facid,facility FROM facilities WHERE facility like "%Tennis%"

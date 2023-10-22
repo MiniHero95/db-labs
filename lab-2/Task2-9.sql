@@ -1,2 +1,3 @@
+/*делаем выборку,где члены клуба зарегестрированы с сентября 2012 года*/
 USE cd;
-select *from members where joindate>2012-08-31
+SELECT memid,surname,firstname FROM members WHERE joindate>"2012-08-31";

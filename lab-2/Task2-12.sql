@@ -1,2 +1,3 @@
+/*Находим дату последней регистрации(MAX(joindate))*/
 USE cd;
-select max(joindate) from members limit 1;
+SELECT MAX(joindate) FROM members;

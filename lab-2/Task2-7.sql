@@ -1,2 +1,3 @@
+/*делаем выборку,чтобы выбрались объекты с facid=1 и facid=5*/
 USE cd;
-SELECT *from facilities where facid like "1" or facid like "5";
+SELECT facid,facility FROM facilities WHERE facid IN(1,5);
