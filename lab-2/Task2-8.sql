@@ -4,4 +4,4 @@ USE cd;
 SELECT facility, "дешевый" AS "качественная стоимость" FROM facilities WHERE monthlymaintenance<100
 UNION
 /*качественная стоимость==дорогой*/
-SELECT facility, "дорогой" AS "качественная стоимость" FROM facilities WHERE monthlymaintenance>=100;
+SELECT facility, "дорогой" FROM facilities WHERE monthlymaintenance>=100;
