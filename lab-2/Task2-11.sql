@@ -4,4 +4,4 @@
 USE cd;
 SELECT firstname AS "union", "member" AS "members/facilies" FROM members WHERE firstname !="GUEST"
 UNION ALL
-SELECT facility, "facility" AS "members/facilies" FROM facilities;
+SELECT facility, "facility" FROM facilities;
