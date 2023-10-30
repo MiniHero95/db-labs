@@ -1,3 +1,4 @@
+/*Выберите список всех членов, включая человека, который их рекомендовал*/
 USE cd;
 SELECT 
     concat(m1.surname, ' ', m1.firstname) AS fiomember

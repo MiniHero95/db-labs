@@ -1,3 +1,4 @@
+/*Выберите список бронирований на 14 сентября 2012 г.*/
 USE cd;
 SELECT DISTINCT CONCAT(f.facility, ' ', m.firstname) AS facilityName, 
 CASE 
