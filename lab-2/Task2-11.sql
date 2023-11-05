@@ -1,7 +1,5 @@
-/*делаем объединие по именам членов клуба и названиям объектов.
-первый столбец отвечает за объединие имен членов клуба и названия объектов.
-Второй столбец отвечает за то, откуда были взяты они(из members или facilities).*/
+/*делаем объединие по именам членов клуба и названиям объектов.*/
 USE cd;
-SELECT firstname AS "union", "member" AS "members/facilies" FROM members WHERE firstname !="GUEST"
+SELECT firstname AS "union" FROM members WHERE firstname !="GUEST"
 UNION ALL
-SELECT facility, "facility" FROM facilities;
+SELECT facility FROM facilities;
