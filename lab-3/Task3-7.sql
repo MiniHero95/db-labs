@@ -1,19 +1,6 @@
 /*Выберите список всех членов, включая человека, который их рекомендовал*/
-USE cd;
-SELECT 
-    concat(m1.surname, ' ', m1.firstname) AS fiomember
-FROM 
-    members m1
-WHERE 
-    EXISTS (
-        SELECT 1
-        FROM members AS m2
-        WHERE m2.memid = m1.recommendedby
-    )
-OR 
-    NOT EXISTS (
-        SELECT 1
-        FROM members AS m3
-        WHERE m3.memid = m1.recommendedby
-    )
-ORDER BY fiomember;
+ USE cd;
+SELECT DISTINCT concat(mem.surname,' ',mem.firstname) AS membername,
+concat(rec.surname,' ',rec.firstname) AS recname
+FROM members mem, (SELECT memid, recommendedby, surname, firstname FROM members) rec 
+WHERE mem.recommendedby=rec.memid;
