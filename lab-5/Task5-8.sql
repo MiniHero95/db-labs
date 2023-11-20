@@ -3,10 +3,10 @@
 USE cd;
 SELECT facility,
 SUM(CASE
-WHEN bookings.memid = 0 THEN facilities.guestcost
-ELSE facilities.membercost
+WHEN b.memid = 0 THEN f.guestcost
+ELSE f.membercost
 END) AS total_revenue
-FROM facilities
-JOIN bookings ON facilities.facid = bookings.facid
+FROM facilities f
+JOIN bookings b ON f.facid = b.facid
 GROUP BY facility
 ORDER BY total_revenue DESC;
