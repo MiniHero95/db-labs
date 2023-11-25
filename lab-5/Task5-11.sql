@@ -4,7 +4,7 @@
 USE cd;
 SELECT f.facid,
        f.facility,
-       ROUND(SUM(b.slots) / 2.0, 2) AS ReservedHours
+       ROUND(SUM(b.slots), 2) AS ReservedHours
 FROM facilities f
 JOIN bookings b ON f.facid = b.facid
 GROUP BY f.facid, f.facility
