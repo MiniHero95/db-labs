@@ -2,8 +2,8 @@
 Включите выходные строки, содержащие итоговые суммы за все месяцы по каждому объекту а также итоговые суммы за все месяцы для всех объектов. 
 Выходная таблица должна состоять из идентификатора объекта, месяца и слотов, отсортированных по идентификатору и месяцу.*/
 USE cd; 
-SELECT 	IFNULL(derived_table.facid, 'Total') as facid,
-		IFNULL(derived_table.month, 'Total') as month,
+SELECT 	IFNULL(derived_table.facid, 0) as facid,
+		IFNULL(derived_table.month, 0) as month,
         SUM(derived_table.slots) AS 'Number of reserved seats'
 FROM 
 (SELECT 
